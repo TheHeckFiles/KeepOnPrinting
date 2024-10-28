@@ -1,8 +1,8 @@
 <?php
 //debug!
 //phpinfo();
-$errorLog = ini_get('error_log');
-var_dump($errorLog);
+//$errorLog = ini_get('error_log');
+//var_dump($errorLog);
 ?>
 <?php snippet('header') ?>
 
