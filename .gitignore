@@ -51,7 +51,7 @@ Icon
 
 
 # Stuff you are creating
-/content
+#/content
 
 # Debug stuff such as php.ini
 /debug
