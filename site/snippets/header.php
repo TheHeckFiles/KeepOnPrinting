@@ -17,7 +17,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <?php
   /*
     In the title tag we show the title of our
@@ -35,12 +35,6 @@
   ?>
   <?= css([
     'assets/css/index-min.css'
-   /* 
-    'assets/css/prism.css',
-    'assets/css/lightbox.css',
-    'assets/css/index.css',
-    '@auto'
-    */
   ]) ?>
 
   <?php
@@ -63,9 +57,15 @@
     */
     ?>
     <a class="logo" href="<?= $site->url() ?>">
-      <?= $site->title()->esc() ?>
+      <?php if($image = $site->image()): ?>
+        <img src="<?= $image->url() ?>" alt="<?= $site->title()->esc() ?>: <?= $site->subtitle()->esc() ?>">
+      <?php endif ?>
+<!--
+            <?= $site->title()->esc() ?>: <?= $site->subtitle()->esc() ?>
+-->
     </a>
-
+    
+    
     <nav class="menu">
       <?php
       /*
